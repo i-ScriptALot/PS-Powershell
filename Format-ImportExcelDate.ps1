@@ -46,7 +46,7 @@ function Format-ImportExcelDate {
     )
 
     PROCESS {
-        Write-Debug -Message "Begin Imported Date Update, Cell Data Count is $($CellData.count)"
+        Write-Debug -Message "Begin format Excel dates ,data Count is $($CellData.count)"
         Write-Debug -Message "DateOnNull is $($DateOnNull)"
 
 
