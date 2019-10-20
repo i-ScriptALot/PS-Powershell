@@ -9,31 +9,31 @@ function Format-ImportExcelDate {
 .PARAMETER DateOnNull
  Static Date and Time returned when CellData is not provided or missing
 .EXAMPLE
-$ImportedExcel = Import-Excel -Path $Path -WorksheetName $WrkShtName |
-    foreach {
-        $CellObject = $_
-        $CellObject.DateColumn = $CellObject.DateColumn |
-            Format-ImportExcelDate -DateOnNull ((get-date).Date)
-        $CellObject
-    }
+ $ImportedExcel = Import-Excel -Path $Path -WorksheetName $WrkShtName |
+     foreach {
+         $CellObject = $_
+         $CellObject.DateColumn = $CellObject.DateColumn |
+             Format-ImportExcelDate -DateOnNull ((get-date).Date)
+         $CellObject
+     }
 
-    Command shows how import an Excel worksheet
-     and format cell values in the column "DateColumn"
-    to a .NET datetime value.
-    The current date/time is
-    returned when an imported cell is empty
-.Notes
+  Command shows how import an Excel worksheet
+  and format cell values in the column "DateColumn"
+  to a .NET datetime value.
+  The current date/time is
+  returned when an imported cell is empty
+.NOTES
  Name: Format-ImportExcelDate
  Author: Mark Curry
  Keywords: Powershell,Excel,Date,Time
-.Link
+.LINK
  https://github.com/i-ScriptALot
- .Link
- https://github.com/dfinke/ImportExcel
-.Inputs
-Object
-.Outputs
-System.DateTime
+.LINK
+  https://github.com/dfinke/ImportExcel
+.INPUTS
+ Object
+.OUTPUTS
+ System.DateTime
 #>
     # Requires -Version 2.0
     [CmdletBinding()]
