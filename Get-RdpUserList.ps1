@@ -1,4 +1,4 @@
-function Start-QuerySession {
+function Get-RdpUserList {
     <#
 .SYNOPSIS
  Query Session / Qwinsta
@@ -8,10 +8,10 @@ function Start-QuerySession {
 .PARAMETER ComputerName
  Host Name or an IP
 .EXAMPLE
-C:\PS>Start-QuerySession -ComputerName 'NSMCURRY-N1'
+C:\PS>Get-RdpUserList -ComputerName 'NSMCURRY-N1'
 Query the users with a current connection to NSMCURRY-N1
 .EXAMPLE
-C:\PS>Start-QuerySession -ComputerName '10.24.254.10'
+C:\PS>Get-RdpUserList -ComputerName '10.24.254.10'
 Query the users with a current connection to '10.24.254.10'
 .Notes
  Name:  Start-QuerySession
