@@ -26,13 +26,10 @@ Query the users with a current connection to '10.24.254.10'
     (
         [Parameter(Mandatory = $True, HelpMessage = 'Parameter Required',
             ValueFromPipeline = $True, Position = 0)]
-        [string[]]$ComputerName,
-
-        [Parameter(Position = 1)]
-        [switch]$Param2
+        [string[]]$ComputerName
     )
 
-    BEGIN {
+BEGIN {
         Write-Debug -Message "Begin QuerySession, Computer Count $($ComputerName.count)"
         if ($ComputerName -match '\.') {
             $Hostname = ([Net.Dns]::GetHostByAddress($ComputerName)).HostName
