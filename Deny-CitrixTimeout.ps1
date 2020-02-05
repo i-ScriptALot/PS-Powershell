@@ -1,7 +1,7 @@
 function Deny-CitrixTimeout {
     # Change timer by setting it as a parameter
     # Deny-CitrixTimeout -TimerInSeconds 600
-    # Will set key stroke every 10 minutes 
+    # Will send key stroke every 10 minutes 
     param(
         [int]$TimerInSeconds = 480
     )
